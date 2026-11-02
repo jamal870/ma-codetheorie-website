@@ -20,11 +20,12 @@ import { FinzaHeader, FinzaFooter } from "@/components/finza";
 import { CodeTheorieLogo } from "@/components/finza/CodeTheorieLogo";
 import proDashboard from "@/assets/screenshots/pro-dashboard.webp";
 import { PUBLISHER } from "@/lib/schema";
+import { PRICE_MAD } from "@/lib/pricing";
 
 const SITE_URL = "https://codetheorie.ma";
 const TITLE = "Codetheorie — Logiciel auto-école & code de la route Maroc";
 const DESCRIPTION =
-  "Logiciel auto-école & entraînement code de la route Maroc 2026. Formules Siya9a Pro pour auto-écoles dès 5 900 MAD/an. Accès candidat complet à 49 MAD.";
+  `Logiciel auto-école & entraînement code de la route Maroc 2026. Formules Siya9a Pro pour auto-écoles dès 5 900 MAD/an. Accès candidat complet à ${PRICE_MAD} MAD.`;
 
 const FAQ = [
   {
@@ -605,7 +606,7 @@ function CandidatsSection() {
               Accès élève
             </p>
             <p className="mt-2 text-[32px] font-extrabold leading-none text-finza-ink">
-              49 MAD
+              {PRICE_MAD} MAD
             </p>
             <p className="mt-2 text-[14px] font-semibold text-finza-brand">
               Paiement unique, 6 mois d'accès complet
