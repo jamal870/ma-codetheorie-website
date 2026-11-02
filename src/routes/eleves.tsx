@@ -8,13 +8,14 @@ import dashboardShot from "@/assets/screenshots/03-dashboard.webp";
 import seriesShot from "@/assets/screenshots/04-series.webp";
 import quizShot from "@/assets/screenshots/05-quiz.webp";
 import { PUBLISHER } from "@/lib/schema";
+import { PRICE_MAD } from "@/lib/pricing";
 
 const THEME_COLOR = "#38bdf8";
 
 const PAGE_URL = "https://codetheorie.ma/eleves";
 const TITLE = "Code Theorie — Entraînement au code de la route Maroc, darija";
 const DESCRIPTION =
-  "1 000 questions d'entraînement au code de la route, examens blancs illimités, français + darija, hors-ligne. 1 examen blanc gratuit (7 jours), puis 49 MAD / 6 mois. Sans abonnement, sans carte.";
+  `1 000 questions d'entraînement au code de la route, examens blancs illimités, français + darija, hors-ligne. 1 examen blanc gratuit (7 jours), puis ${PRICE_MAD} MAD / 6 mois. Sans abonnement, sans carte.`;
 
 const REGISTER_URL = "https://app.codetheorie.ma/?mode=register";
 
@@ -56,7 +57,7 @@ const FEATURES = [
   { icon: "📴", title: "Fonctionne hors-ligne", desc: "3,7 Mo de cache — révise dans le taxi, le tram, le désert. Sync dès que le wifi revient." },
   { icon: "📲", title: "Installable comme une app", desc: "Ajoute-la à ton écran d'accueil en 1 clic — iPhone, Android, PC. Pas d'App Store." },
   { icon: "🏆", title: "Suivi de progression", desc: "Streak, taux de réussite, évolution sur 7 jours et derniers examens blancs. Tu vois où tu en es." },
-  { icon: "🔒", title: "Sans abonnement piège", desc: "49 MAD / 6 mois, accès complet. Zéro débit automatique, zéro carte enregistrée." },
+  { icon: "🔒", title: "Sans abonnement piège", desc: `${PRICE_MAD} MAD / 6 mois, accès complet. Zéro débit automatique, zéro carte enregistrée.` },
 ];
 
 const SCREENS = [
@@ -68,7 +69,7 @@ const SCREENS = [
 ];
 
 const COMPARE = [
-  ["Prix", "800 à 1 500 MAD", "49 MAD"],
+  ["Prix", "800 à 1 500 MAD", `${PRICE_MAD} MAD`],
   ["Disponibilité", "Horaires fixes", "24/7 · partout"],
   ["Mise à jour", "Livre papier (selon l'édition)", "Mis à jour par l'éditeur"],
   ["Nombre de questions", "≈ 200 dans le livre", "1 000 d'entraînement"],
@@ -90,13 +91,13 @@ const OFFER_FEATURES = [
 
 const FAQS: ReadonlyArray<readonly [string, string]> = [
   ["Est-ce un examen officiel ou certifié ?", "Code Theorie est une application indépendante de préparation à l'examen théorique. Elle n'est ni éditée, ni approuvée, ni certifiée par la NARSA. Les examens blancs sont des entraînements, pas des examens officiels, et aucune réussite à l'examen n'est garantie. Seule la NARSA organise l'examen officiel."],
-  ["Comment fonctionne l'examen blanc gratuit ?", "Inscription email, pas de carte → 1 examen blanc complet gratuit, valable 7 jours après l'inscription ou jusqu'à ce que tu l'aies passé (selon ce qui arrive en premier). Pour les séries, la révision et les examens blancs illimités : 49 MAD / 6 mois, par virement, reçu sur WhatsApp."],
-  ["Combien coûte l'accès complet ?", "49 MAD / 6 mois. Pas d'abonnement, pas de renouvellement automatique. Paiement par virement ou Wafacash, reçu sur WhatsApp."],
+  ["Comment fonctionne l'examen blanc gratuit ?", `Inscription email, pas de carte → 1 examen blanc complet gratuit, valable 7 jours après l'inscription ou jusqu'à ce que tu l'aies passé (selon ce qui arrive en premier). Pour les séries, la révision et les examens blancs illimités : ${PRICE_MAD} MAD / 6 mois, par virement, reçu sur WhatsApp.`],
+  ["Combien coûte l'accès complet ?", `${PRICE_MAD} MAD / 6 mois. Pas d'abonnement, pas de renouvellement automatique. Paiement par virement ou Wafacash, reçu sur WhatsApp.`],
   ["Comment je paye ?", "Par virement bancaire ou Wafacash, puis tu nous envoies le reçu sur WhatsApp. C'est la méthode principale. Carte bancaire marocaine (CMI) disponible en option via YouCan Pay."],
   ["Est-ce que ça marche sans internet ?", "Oui. Depuis le tableau de bord, télécharge le contenu pour l'utiliser hors-ligne. Tu peux alors réviser sans connexion ; ta progression se synchronise dès que le wifi revient."],
   ["C'est disponible en darija ?", "Oui. L'interface est en français, mais chaque question dispose d'un bouton « Écouter » qui lit la question et les réponses en darija marocaine. Idéal si tu comprends mieux à l'oral."],
   ["Comment j'installe l'app sur mon téléphone ?", "Sur iPhone : ouvre Safari → codetheorie.ma → bouton Partager → « Sur l'écran d'accueil ». Sur Android : Chrome te propose automatiquement « Installer l'app ». Pas besoin d'App Store."],
-  ["Je peux annuler à tout moment ?", "Il n'y a rien à annuler — c'est un paiement unique de 49 MAD / 6 mois. Aucune carte n'est stockée, aucun débit ne se déclenche automatiquement."],
+  ["Je peux annuler à tout moment ?", `Il n'y a rien à annuler — c'est un paiement unique de ${PRICE_MAD} MAD / 6 mois. Aucune carte n'est stockée, aucun débit ne se déclenche automatiquement.`],
   ["Ça marche sur ordinateur aussi ?", "Oui — la même app fonctionne sur PC, Mac, tablette et téléphone. Tu te connectes avec le même compte partout, ta progression est synchronisée en temps réel."],
   ["Mes données sont-elles en sécurité ?", "Oui. Aucune donnée revendue. Aucune publicité. Hébergement sécurisé, paiements via YouCan Pay. Tu peux supprimer ton compte à tout moment."],
   ["Combien de temps faut-il pour se préparer ?", "Cela dépend de ton niveau et de ton rythme. Le tableau de bord te montre ta progression ; c'est une indication d'entraînement, pas une garantie de réussite à l'examen."],
@@ -134,7 +135,7 @@ export const Route = createFileRoute("/eleves")({
           inLanguage: ["fr-MA", "ar-MA"],
           offers: {
             "@type": "Offer",
-            price: "49",
+            price: String(PRICE_MAD),
             priceCurrency: "MAD",
             availability: "https://schema.org/InStock",
             url: REGISTER_URL,
@@ -186,7 +187,7 @@ function ElevesPage() {
               <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-finza-ink-soft">
               L'app marocaine pour t'entraîner à l'examen théorique du permis : 1 000 questions d'entraînement,
               examens blancs illimités, français + darija en audio, hors-ligne.
-              <strong className="text-finza-ink"> 1 examen blanc gratuit</strong>, puis <strong className="text-finza-ink">49 MAD / 6 mois</strong> — au lieu de 1 200 MAD à l'auto-école.
+              <strong className="text-finza-ink"> 1 examen blanc gratuit</strong>, puis <strong className="text-finza-ink">{PRICE_MAD} MAD / 6 mois</strong> — au lieu de 1 200 MAD à l'auto-école.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -238,7 +239,7 @@ function ElevesPage() {
               ["1 000", "Questions d'entraînement"],
               ["37", "Séries thématiques"],
               ["1", "Examen blanc gratuit"],
-              ["49 MAD", "Paiement unique · 6 mois"],
+              [`${PRICE_MAD} MAD`, "Paiement unique · 6 mois"],
             ].map(([n, l]) => (
               <div key={l} className="text-center">
                 <div className="text-3xl font-black text-finza-brand sm:text-4xl">{n}</div>
@@ -362,7 +363,7 @@ function ElevesPage() {
             <div className="text-center">
               <p className="text-[11px] font-extrabold uppercase tracking-[2px] text-finza-brand">Tarifs transparents</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight text-finza-ink sm:text-4xl">
-                1 examen blanc gratuit, puis 49 MAD / 6 mois
+                1 examen blanc gratuit, puis {PRICE_MAD} MAD / 6 mois
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-finza-ink-soft">
                 Un seul paiement, 6 mois d'accès complet. Aucun abonnement. Aucun renouvellement automatique.
@@ -409,7 +410,7 @@ function ElevesPage() {
                     ⭐ Le choix des élèves
                   </div>
                   <div className="mt-4 flex items-baseline gap-2">
-                    <span className="text-[56px] font-black leading-none">49</span>
+                    <span className="text-[56px] font-black leading-none">{PRICE_MAD}</span>
                     <span className="text-2xl font-bold opacity-80">MAD</span>
                   </div>
                   <div className="mt-1 text-sm opacity-70">Paiement unique · 6 mois</div>
@@ -425,7 +426,7 @@ function ElevesPage() {
                     href={REGISTER_URL}
                     className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-finza-brand px-7 py-4 text-[15px] font-extrabold text-finza-brand-ink shadow-[var(--finza-shadow-brand)] transition-transform hover:scale-[1.02]"
                   >
-                    🚀 Démarrer — 49 MAD / 6 mois
+                    🚀 Démarrer — {PRICE_MAD} MAD / 6 mois
                   </a>
                 </div>
               </div>
@@ -503,7 +504,7 @@ function ElevesPage() {
               🚀 Faire mon examen blanc gratuit
             </a>
             <p className="mt-4 text-xs opacity-80">
-              Puis 49 MAD / 6 mois pour séries + révision + examens illimités. Zéro abonnement.
+              Puis {PRICE_MAD} MAD / 6 mois pour séries + révision + examens illimités. Zéro abonnement.
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-finza-ink-soft">
