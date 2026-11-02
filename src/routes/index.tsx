@@ -36,8 +36,8 @@ const FAQ = [
     a: "Les formules Siya9a Pro pour auto-écoles débutent à 5 900 MAD/an (Start), 9 900 MAD/an (ÉLITE Medium) et 18 900 MAD/an (ÉLITE Grand Cabinet). Tous les plans incluent onboarding, formation de l'équipe et support WhatsApp.",
   },
   {
-    q: "Est-ce conforme NARSA ?",
-    a: "Siya9a est aligné sur la réforme NARSA 2026 : les séries, examens blancs et statistiques suivent le référentiel officiel du code de la route Maroc. Siya9a ne remplace pas le portail NARSA, il le complète.",
+    q: "Siya9a est-il certifié ou approuvé par la NARSA ?",
+    a: "Non. Siya9a Pro est un logiciel privé et indépendant. Il accompagne la réforme NARSA 2026 comme outil de gestion, mais n'est ni édité, ni certifié, ni recommandé par la NARSA et ne remplace pas son portail.",
   },
   {
     q: "Combien d'élèves puis-je gérer ?",
@@ -135,7 +135,7 @@ const B2B_FEATURES = [
   {
     icon: ClipboardCheck,
     title: "Examens blancs illimités",
-    desc: "Séries officielles NARSA 2026, correction automatique, mode examen chronométré.",
+    desc: "Séries d'entraînement, correction automatique, mode examen chronométré.",
   },
   {
     icon: BarChart3,
@@ -156,7 +156,7 @@ const B2B_PLANS = [
       "Écosystème complet : panel admin + codetheorie.ma (app élèves) + mode enseignement TV/Beamer",
       "Toutes les fonctionnalités de gestion, sans restriction (élèves, planning, examens, véhicules, moniteurs, finances)",
       "Facturation DGI · TVA 20 % · bulletins de paie CNSS",
-      "Portails élèves WhatsApp · audio Darija · contenu NARSA conforme",
+      "Portails élèves WhatsApp · audio Darija · contenu d'entraînement au code",
       "Multi-utilisateurs (directeur, secrétaire, moniteur)",
       "20 nouveaux élèves / mois",
       "Support e-mail & WhatsApp · onboarding vidéo",
@@ -313,7 +313,7 @@ function Hero() {
                   Candidat au permis&nbsp;?
                 </p>
                 <p className="text-[14px] font-bold text-finza-ink">
-                  Teste 3 questions officielles NARSA — gratuit, sans inscription
+                  Teste 3 questions d'entraînement — gratuit, sans inscription
                 </p>
               </div>
             </div>
@@ -507,7 +507,7 @@ function EcolesSection() {
               </span>
             </div>
             <div className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-finza-ink-soft">
-              <CreditCard className="h-3.5 w-3.5" aria-hidden /> Paiement 100% sécurisé · Facture DGI conforme envoyée automatiquement
+              <CreditCard className="h-3.5 w-3.5" aria-hidden /> Paiement sécurisé · Facture DGI conforme envoyée automatiquement
             </div>
             <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] font-semibold text-finza-ink">
               <span>YouCan Pay</span>
@@ -554,18 +554,18 @@ function EcolesSection() {
 const B2C_FEATURES = [
   {
     icon: BookOpen,
-    title: "Séries officielles NARSA 2026",
-    desc: "1500+ questions à jour, classées par thème et par difficulté.",
+    title: "Séries d'entraînement",
+    desc: "1 000 questions classées par thème, avec explications.",
   },
   {
     icon: Timer,
     title: "Mode examen chronométré",
-    desc: "Mêmes conditions que le jour J : 40 questions, correction immédiate.",
+    desc: "Au format de l'examen théorique : 40 questions, correction immédiate. Un entraînement, pas un examen officiel.",
   },
   {
     icon: Video,
-    title: "Explications vidéo",
-    desc: "Chaque réponse expliquée, pour comprendre au lieu d'apprendre par cœur.",
+    title: "Explications écrites et audio",
+    desc: "Chaque réponse expliquée en français et en darija, pour comprendre au lieu d'apprendre par cœur.",
   },
   {
     icon: Languages,
@@ -597,7 +597,7 @@ function CandidatsSection() {
           </h2>
           <p className="mt-5 text-[16px] leading-relaxed text-finza-ink-soft">
             Code Theorie est la plateforme d'entraînement pour les candidats — indépendante de ton
-            auto-école. Séries officielles, examens blancs, explications vidéo.
+            auto-école. Séries d'entraînement, examens blancs, explications.
           </p>
 
           <div className="mt-8 rounded-lg border border-finza-line bg-white p-6 shadow-[var(--finza-shadow)]">

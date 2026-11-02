@@ -24,8 +24,8 @@ export function FinzaFooter({ product, productName, hideOtherProducts = false }:
             {productName}
           </p>
           <p className="mt-3 text-sm leading-relaxed text-white/70">
-            Un produit de la famille Finza Tech : des outils marocains, conformes
-            et pensés pour la réalité du terrain.
+            Un produit de la famille Finza Tech : des outils marocains pensés pour
+            la réalité du terrain. Finza Tech est un éditeur privé, indépendant de la NARSA.
           </p>
         </div>
 

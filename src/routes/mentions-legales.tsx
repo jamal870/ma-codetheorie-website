@@ -81,8 +81,18 @@ function MentionsLegales() {
 
       <LegalBlock heading="Propriété intellectuelle">
         <p>
-          Tous les contenus présents sur ce site (textes, images, logos, code source) sont la
-          propriété exclusive de Finza Tech, sauf mention contraire.
+          Les textes, logos et le code source de ce site sont la propriété de Finza Tech, sauf
+          mention contraire. Certains contenus d'entraînement (questions, illustrations) sont
+          fondés sur des supports de la NARSA, dont les droits restent à leurs titulaires.
+        </p>
+      </LegalBlock>
+
+      <LegalBlock heading="Indépendance et absence de garantie">
+        <p>
+          Code Theorie est une application indépendante de préparation à l'examen théorique du
+          permis de conduire. Elle n'est ni éditée, ni approuvée, ni certifiée par la NARSA. Les
+          examens blancs sont des entraînements, pas des examens officiels. Finza Tech ne garantit
+          pas la réussite à l'examen ; seule la NARSA organise l'examen officiel.
         </p>
       </LegalBlock>
 

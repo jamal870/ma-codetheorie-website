@@ -1,9 +1,9 @@
 # Code Theorie
 
-> Plateforme marocaine pour préparer l'examen du code de la route NARSA 2026 (élèves) et gérer une auto-école conforme DGI, CNSS et NARSA (professionnels). Éditeur : Finza Tech SARL, Casablanca, Maroc.
+> Plateforme marocaine pour préparer l'examen du code de la route NARSA 2026 (élèves) et gérer une auto-école (facturation DGI, paie CNSS, suivi des dossiers NARSA ; professionnels). Éditeur : Finza Tech SARL, Casablanca, Maroc.
 
 Code Theorie regroupe deux produits distincts :
-- **Code Theorie / Siya9a Code** — application web offline-first pour les élèves marocains : questions officielles NARSA 2026, examens blancs, audio en darija, français strict.
+- **Code Theorie / Siya9a Code** — application web offline-first pour les élèves marocains : questions d'entraînement, examens blancs, audio en darija, français strict. Application indépendante de la NARSA, sans examen officiel ni garantie de réussite.
 - **Siya9a Pro** — logiciel de gestion complet pour auto-écoles : élèves, planning, flotte, facturation DGI, paie CNSS, examens NARSA, WhatsApp intégré.
 
 ## Pages

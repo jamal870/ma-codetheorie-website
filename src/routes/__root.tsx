@@ -73,16 +73,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Code Theorie — Plateforme certifiée NARSA 2026" },
+      { title: "Code Theorie — Préparation à l'examen théorique du permis (Maroc)" },
       { name: "description", content: "Code Theorie : la solution complète pour auto-écoles, moniteurs et élèves au Maroc — code de la route, théorie et gestion." },
       { name: "author", content: "Finza Tech" },
-      { property: "og:title", content: "Code Theorie — Plateforme certifiée NARSA 2026" },
+      { property: "og:title", content: "Code Theorie — Préparation à l'examen théorique du permis (Maroc)" },
       { property: "og:description", content: "Code Theorie : la solution complète pour auto-écoles, moniteurs et élèves au Maroc — code de la route, théorie et gestion." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Code Theorie" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@codetheorie" },
-      { name: "twitter:title", content: "Code Theorie — Plateforme certifiée NARSA 2026" },
+      { name: "twitter:title", content: "Code Theorie — Préparation à l'examen théorique du permis (Maroc)" },
       { name: "twitter:description", content: "Code Theorie : la solution complète pour auto-écoles, moniteurs et élèves au Maroc — code de la route, théorie et gestion." },
       { property: "og:image", content: "https://codetheorie.ma/og-codetheorie.jpg" },
       { property: "og:image:width", content: "1200" },
@@ -125,7 +125,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           logo: "https://codetheorie.ma/finza-logo.png",
           image: "https://codetheorie.ma/og-codetheorie.jpg",
           description:
-            "Éditeur marocain de Code Theorie (entraînement au code de la route NARSA 2026) et de Siya9a Pro (logiciel de gestion d'auto-école).",
+            "Éditeur marocain de Code Theorie (entraînement à l'examen théorique du permis, application indépendante de la NARSA) et de Siya9a Pro (logiciel de gestion d'auto-école).",
           email: "support@finza.ma",
           telephone: "+212661349492",
           contactPoint: {
