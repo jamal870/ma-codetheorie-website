@@ -12,9 +12,9 @@ import { PUBLISHER } from "@/lib/schema";
 const THEME_COLOR = "#38bdf8";
 
 const PAGE_URL = "https://codetheorie.ma/eleves";
-const TITLE = "Code Theorie — Code de la route Maroc NARSA 2026, darija";
+const TITLE = "Code Theorie — Entraînement au code de la route Maroc, darija";
 const DESCRIPTION =
-  "1480 questions NARSA 2026, examens blancs illimités, français + darija, hors-ligne. 1 examen blanc gratuit (7 jours), puis 49 MAD / 6 mois. Sans abonnement, sans carte.";
+  "1 000 questions d'entraînement au code de la route, examens blancs illimités, français + darija, hors-ligne. 1 examen blanc gratuit (7 jours), puis 49 MAD / 6 mois. Sans abonnement, sans carte.";
 
 const REGISTER_URL = "https://app.codetheorie.ma/?mode=register";
 
@@ -28,8 +28,8 @@ const NAV = [
 const PAINS = [
   {
     icon: "📚",
-    title: "Livres NARSA périmés ?",
-    desc: "Les cahiers papier datent de 2020. Le nouveau programme NARSA 2026 a changé — l'ancien te fait rater l'examen.",
+    title: "Supports papier dépassés ?",
+    desc: "Les cahiers papier ne sont pas toujours à jour. Vérifie que ton support correspond au programme en vigueur.",
   },
   {
     icon: "⏰",
@@ -49,20 +49,20 @@ const PAINS = [
 ];
 
 const FEATURES = [
-  { icon: "🎯", title: "1 480 questions NARSA 2026", desc: "L'intégralité du nouveau programme officiel, mis à jour automatiquement." },
-  { icon: "📝", title: "37 séries thématiques", desc: "Panneaux, priorités, nuit, alcool, autoroute… chaque thème isolé pour progresser." },
+  { icon: "🎯", title: "1 000 questions d'entraînement", desc: "Des questions au format de l'examen théorique du permis B, avec explications en français et en darija." },
+  { icon: "📝", title: "25 séries thématiques", desc: "Panneaux, priorités, nuit, alcool, autoroute… chaque thème isolé pour progresser." },
   { icon: "🎧", title: "Écoute en Darija", desc: "Chaque question lisible en français ET écoutable en darija marocaine (bouton audio)." },
-  { icon: "📊", title: "Examens blancs illimités", desc: "40 questions chronométrées dans les conditions exactes de l'examen NARSA. Score immédiat." },
+  { icon: "📊", title: "Examens blancs illimités", desc: "40 questions chronométrées, au format de l'examen théorique. Score immédiat. Un entraînement, pas un examen officiel." },
   { icon: "📴", title: "Fonctionne hors-ligne", desc: "3,7 Mo de cache — révise dans le taxi, le tram, le désert. Sync dès que le wifi revient." },
   { icon: "📲", title: "Installable comme une app", desc: "Ajoute-la à ton écran d'accueil en 1 clic — iPhone, Android, PC. Pas d'App Store." },
-  { icon: "🏆", title: "Suivi de progression", desc: "Streak, taux de réussite par thème, indicateur « prêt examen ». Tu sais exactement où tu en es." },
+  { icon: "🏆", title: "Suivi de progression", desc: "Streak, taux de réussite, évolution sur 7 jours et derniers examens blancs. Tu vois où tu en es." },
   { icon: "🔒", title: "Sans abonnement piège", desc: "49 MAD / 6 mois, accès complet. Zéro débit automatique, zéro carte enregistrée." },
 ];
 
 const SCREENS = [
   { src: dashboardShot, title: "Ton tableau de bord", desc: "Ton taux de réussite, ton streak, ton prochain examen blanc — tout en un coup d'œil." },
-  { src: quizShot, title: "Une question NARSA officielle", desc: "Photo réelle, choix multiples, bouton « Écouter en darija ». Comprends avant de répondre." },
-  { src: seriesShot, title: "37 séries thématiques", desc: "Panneaux, priorités, nuit, autoroute… bosse un thème à la fois." },
+  { src: quizShot, title: "Une question d'entraînement", desc: "Photo réelle, choix multiples, bouton « Écouter en darija ». Comprends avant de répondre." },
+  { src: seriesShot, title: "25 séries thématiques", desc: "Panneaux, priorités, nuit, autoroute… bosse un thème à la fois." },
   { src: loginShot, title: "Connexion sécurisée", desc: "Email ou numéro marocain. Reste connecté sur tous tes appareils." },
   { src: registerShot, title: "Inscription en 30 secondes", desc: "Aucune carte bancaire. 1 examen blanc gratuit dès l'inscription, valable 7 jours." },
 ];
@@ -70,8 +70,8 @@ const SCREENS = [
 const COMPARE = [
   ["Prix", "800 à 1 500 MAD", "49 MAD"],
   ["Disponibilité", "Horaires fixes", "24/7 · partout"],
-  ["Programme", "Livre papier (souvent 2020)", "NARSA 2026 mis à jour"],
-  ["Nombre de questions", "≈ 200 dans le livre", "1 480 officielles"],
+  ["Mise à jour", "Livre papier (selon l'édition)", "Mis à jour par l'éditeur"],
+  ["Nombre de questions", "≈ 200 dans le livre", "1 000 d'entraînement"],
   ["Examens blancs", "1 × en salle", "Illimités"],
   ["Suivi de progression", "Aucun", "Live · par thème"],
   ["Écoute en darija", "Non", "Oui, chaque question"],
@@ -79,8 +79,8 @@ const COMPARE = [
 ];
 
 const OFFER_FEATURES = [
-  "1 480 questions NARSA 2026 officielles",
-  "37 séries thématiques",
+  "1 000 questions d'entraînement au format de l'examen",
+  "25 séries thématiques",
   "Examens blancs illimités",
   "Français + Darija (audio)",
   "Mode hors-ligne complet",
@@ -89,17 +89,17 @@ const OFFER_FEATURES = [
 ];
 
 const FAQS: ReadonlyArray<readonly [string, string]> = [
-  ["C'est vraiment 100% conforme NARSA 2026 ?", "Oui. Toutes les 1 480 questions correspondent au format et au contenu exact de l'examen NARSA 2026. Nous travaillons avec des moniteurs marocains certifiés qui vérifient chaque mise à jour."],
+  ["Est-ce un examen officiel ou certifié ?", "Code Theorie est une application indépendante de préparation à l'examen théorique. Elle n'est ni éditée, ni approuvée, ni certifiée par la NARSA. Les examens blancs sont des entraînements, pas des examens officiels, et aucune réussite à l'examen n'est garantie. Seule la NARSA organise l'examen officiel."],
   ["Comment fonctionne l'examen blanc gratuit ?", "Inscription email, pas de carte → 1 examen blanc complet gratuit, valable 7 jours après l'inscription ou jusqu'à ce que tu l'aies passé (selon ce qui arrive en premier). Pour les séries, la révision et les examens blancs illimités : 49 MAD / 6 mois, par virement, reçu sur WhatsApp."],
   ["Combien coûte l'accès complet ?", "49 MAD / 6 mois. Pas d'abonnement, pas de renouvellement automatique. Paiement par virement ou Wafacash, reçu sur WhatsApp."],
   ["Comment je paye ?", "Par virement bancaire ou Wafacash, puis tu nous envoies le reçu sur WhatsApp. C'est la méthode principale. Carte bancaire marocaine (CMI) disponible en option via YouCan Pay."],
-  ["Est-ce que ça marche sans internet ?", "Oui. Après la première ouverture, 3,7 Mo sont mis en cache (les 1 480 images incluses). Tu peux réviser dans le tram, le taxi, en dehors de la ville. Tout se synchronise dès que le wifi revient."],
+  ["Est-ce que ça marche sans internet ?", "Oui. Depuis le tableau de bord, télécharge le contenu pour l'utiliser hors-ligne. Tu peux alors réviser sans connexion ; ta progression se synchronise dès que le wifi revient."],
   ["C'est disponible en darija ?", "Oui. L'interface est en français, mais chaque question dispose d'un bouton « Écouter » qui lit la question et les réponses en darija marocaine. Idéal si tu comprends mieux à l'oral."],
   ["Comment j'installe l'app sur mon téléphone ?", "Sur iPhone : ouvre Safari → codetheorie.ma → bouton Partager → « Sur l'écran d'accueil ». Sur Android : Chrome te propose automatiquement « Installer l'app ». Pas besoin d'App Store."],
   ["Je peux annuler à tout moment ?", "Il n'y a rien à annuler — c'est un paiement unique de 49 MAD / 6 mois. Aucune carte n'est stockée, aucun débit ne se déclenche automatiquement."],
   ["Ça marche sur ordinateur aussi ?", "Oui — la même app fonctionne sur PC, Mac, tablette et téléphone. Tu te connectes avec le même compte partout, ta progression est synchronisée en temps réel."],
-  ["Mes données sont-elles en sécurité ?", "Oui. Aucune donnée revendue. Aucune publicité. Hébergement conforme, paiements via YouCan Pay (certifié PCI-DSS). Tu peux supprimer ton compte à tout moment."],
-  ["Combien de temps pour réussir le code avec ça ?", "En moyenne : 2 à 3 semaines à raison de 30 min/jour. Le tableau de bord te dit quand tu es « prêt examen » — au-dessus de 85% de réussite sur les examens blancs."],
+  ["Mes données sont-elles en sécurité ?", "Oui. Aucune donnée revendue. Aucune publicité. Hébergement sécurisé, paiements via YouCan Pay. Tu peux supprimer ton compte à tout moment."],
+  ["Combien de temps faut-il pour se préparer ?", "Cela dépend de ton niveau et de ton rythme. Le tableau de bord te montre ta progression ; c'est une indication d'entraînement, pas une garantie de réussite à l'examen."],
 ];
 
 export const Route = createFileRoute("/eleves")({
@@ -176,15 +176,15 @@ function ElevesPage() {
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3.5 py-1.5 text-[12px] font-bold text-finza-brand shadow-sm">
-                🎯 100% conforme NARSA 2026 · 1 480 questions
+                🎯 Préparation à l'examen théorique · 1 000 questions
               </div>
               <h1 className="text-[40px] font-black leading-[1.05] tracking-tight text-finza-ink sm:text-[56px]">
-                Réussis ton{" "}
+                Entraîne-toi au{" "}
                 <span className="text-finza-brand">code de la route</span>{" "}
                 sans y passer 3 mois
               </h1>
               <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-finza-ink-soft">
-              L'app marocaine pour préparer l'examen NARSA 2026 : 1 480 questions officielles,
+              L'app marocaine pour t'entraîner à l'examen théorique du permis : 1 000 questions d'entraînement,
               examens blancs illimités, français + darija en audio, hors-ligne.
               <strong className="text-finza-ink"> 1 examen blanc gratuit</strong>, puis <strong className="text-finza-ink">49 MAD / 6 mois</strong> — au lieu de 1 200 MAD à l'auto-école.
               </p>
@@ -222,7 +222,7 @@ function ElevesPage() {
                 />
                 <img
                   src={quizShot}
-                  alt="Question NARSA officielle avec bouton Écouter en darija"
+                  alt="Question d'entraînement avec bouton Écouter en darija"
                   className="absolute -bottom-6 -left-10 hidden h-auto w-[180px] rotate-[-8deg] rounded-[28px] border-[6px] border-finza-ink shadow-[var(--finza-shadow-brand)] sm:block"
                   loading="lazy"
                 />
@@ -235,7 +235,7 @@ function ElevesPage() {
         <section className="border-y border-finza-line bg-white px-5 py-10">
           <div className="mx-auto grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4">
             {[
-              ["1 480", "Questions NARSA 2026"],
+              ["1 000", "Questions d'entraînement"],
               ["37", "Séries thématiques"],
               ["1", "Examen blanc gratuit"],
               ["49 MAD", "Paiement unique · 6 mois"],
@@ -278,10 +278,10 @@ function ElevesPage() {
             <div className="text-center">
               <p className="text-[11px] font-extrabold uppercase tracking-[2px] text-finza-brand">Ce que tu obtiens</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight text-finza-ink sm:text-4xl">
-                Tout ce qu'il te faut pour réussir NARSA
+                Tout ce qu'il te faut pour t'entraîner
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-finza-ink-soft">
-                Conçu avec des moniteurs marocains certifiés. Optimisé mobile. Zéro publicité.
+                Optimisé mobile. Zéro publicité.
               </p>
             </div>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -491,7 +491,7 @@ function ElevesPage() {
         <section className="px-5 py-20">
           <div className="mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-finza-brand to-finza-ink px-8 py-14 text-center text-finza-brand-ink shadow-[var(--finza-shadow-brand)]">
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
-              Prêt à passer NARSA en 3 semaines ?
+              Prêt à t'entraîner ?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-[15px] opacity-90">
               Crée ton compte en 30 secondes. 1 examen blanc gratuit pour tester, valable 7 jours. Aucune carte.
@@ -506,6 +506,11 @@ function ElevesPage() {
               Puis 49 MAD / 6 mois pour séries + révision + examens illimités. Zéro abonnement.
             </p>
           </div>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-finza-ink-soft">
+            Code Theorie est une application indépendante de préparation à l'examen théorique. Elle
+            n'est ni éditée, ni approuvée, ni certifiée par la NARSA. Les examens blancs sont des
+            entraînements, pas des examens officiels, et aucune réussite à l'examen n'est garantie.
+          </p>
         </section>
 
         {/* WhatsApp floating */}

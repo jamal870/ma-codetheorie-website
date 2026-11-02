@@ -109,7 +109,7 @@ function Page() {
           </li>
           <li>
             <strong>Formation théorique</strong> — cours en salle et/ou entraînement personnel sur
-            les questions officielles.
+            des questions d'entraînement.
           </li>
           <li>
             <strong>Épreuve théorique (code)</strong> — organisée par NARSA, sur écran, sous forme
