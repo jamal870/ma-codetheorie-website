@@ -20,12 +20,11 @@ import { FinzaHeader, FinzaFooter } from "@/components/finza";
 import { CodeTheorieLogo } from "@/components/finza/CodeTheorieLogo";
 import proDashboard from "@/assets/screenshots/pro-dashboard.webp";
 import { PUBLISHER } from "@/lib/schema";
-import { PRICE_MAD } from "@/lib/pricing";
 
 const SITE_URL = "https://codetheorie.ma";
 const TITLE = "Codetheorie — Logiciel auto-école & code de la route Maroc";
 const DESCRIPTION =
-  `Logiciel auto-école & entraînement code de la route Maroc 2026. Formules Siya9a Pro pour auto-écoles dès 5 900 MAD/an. Accès candidat complet à ${PRICE_MAD} MAD.`;
+  "Logiciel de gestion pour auto-écoles (Siya9a Pro, dès 5 900 MAD/an) et entraînement gratuit au code de la route pour leurs candidats (Code Theorie).";
 
 const FAQ = [
   {
@@ -556,7 +555,7 @@ const B2C_FEATURES = [
   {
     icon: BookOpen,
     title: "Séries d'entraînement",
-    desc: "1 000 questions classées par thème, avec explications.",
+    desc: "1 000 questions, par série ou par thème, avec explications.",
   },
   {
     icon: Timer,
@@ -597,8 +596,8 @@ function CandidatsSection() {
             Tu passes le permis&nbsp;? <span className="text-finza-brand">Entraîne-toi ici.</span>
           </h2>
           <p className="mt-5 text-[16px] leading-relaxed text-finza-ink-soft">
-            Code Theorie est la plateforme d'entraînement pour les candidats — indépendante de ton
-            auto-école. Séries d'entraînement, examens blancs, explications.
+            Code Theorie est la plateforme d'entraînement gratuite pour les candidats, en complément
+            des cours de ton auto-école. Séries, entraînement par thème, examens blancs, explications.
           </p>
 
           <div className="mt-8 rounded-lg border border-finza-line bg-white p-6 shadow-[var(--finza-shadow)]">
@@ -606,14 +605,14 @@ function CandidatsSection() {
               Accès élève
             </p>
             <p className="mt-2 text-[32px] font-extrabold leading-none text-finza-ink">
-              {PRICE_MAD} MAD
+              Gratuit
             </p>
             <p className="mt-2 text-[14px] font-semibold text-finza-brand">
-              Paiement unique, 6 mois d'accès complet
+              Aucun paiement, aucune carte, aucun abonnement
             </p>
             <p className="mt-1 text-[13px] text-finza-ink-soft">
-              Aucun abonnement, aucun renouvellement automatique. L'examen blanc gratuit est valable 7 jours
-              après l'inscription ou jusqu'à ce que tu l'aies passé.
+              Un service de Finza Tech pour les auto-écoles et leurs candidats. Auto-écoles : partagez
+              simplement le lien à vos candidats.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -625,10 +624,10 @@ function CandidatsSection() {
               </Link>
               <Link
                 to="/eleves"
-                hash="essai"
+                hash="auto-ecoles"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-finza-ink px-6 py-3 text-[14px] font-bold text-finza-ink transition-colors hover:bg-finza-paper"
               >
-                <Car className="h-4 w-4" aria-hidden />1 examen blanc gratuit
+                <Car className="h-4 w-4" aria-hidden />Pour mes candidats
               </Link>
             </div>
           </div>

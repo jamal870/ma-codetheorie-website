@@ -1,15 +1,15 @@
 # Code Theorie
 
-> Plateforme marocaine pour préparer l'examen du code de la route NARSA 2026 (élèves) et gérer une auto-école (facturation DGI, paie CNSS, suivi des dossiers NARSA ; professionnels). Éditeur : Finza Tech SARL, Casablanca, Maroc.
+> Plateforme marocaine pour s'entraîner gratuitement à l'examen du code de la route (candidats) et gérer une auto-école (facturation DGI, paie CNSS, suivi des dossiers NARSA ; professionnels). Éditeur : Finza Tech SARL, Casablanca, Maroc.
 
 Code Theorie regroupe deux produits distincts :
-- **Code Theorie / Siya9a Code** — application web offline-first pour les élèves marocains : questions d'entraînement, examens blancs, audio en darija, français strict. Application indépendante de la NARSA, sans examen officiel ni garantie de réussite.
+- **Code Theorie** — application web gratuite pour les candidats au permis : questions d'entraînement, entraînement par thème, examens blancs, audio en darija, français. Un service de Finza Tech pour les auto-écoles et leurs candidats. Application indépendante de la NARSA, sans examen officiel ni garantie de réussite ; les questions d'entraînement ne correspondent pas nécessairement à la banque de questions officielle en vigueur.
 - **Siya9a Pro** — logiciel de gestion complet pour auto-écoles : élèves, planning, flotte, facturation DGI, paie CNSS, examens NARSA, WhatsApp intégré.
 
 ## Pages
 
 - [Accueil](https://codetheorie.ma/): Hub — choisis ton parcours (élève ou auto-école).
-- [Élèves](https://codetheorie.ma/eleves): Code Theorie pour candidats au permis marocain.
+- [Élèves](https://codetheorie.ma/eleves): Code Theorie, entraînement gratuit pour les candidats au permis marocain ; section pour les auto-écoles.
 - [Mentions légales](https://codetheorie.ma/mentions-legales)
 - [CGV](https://codetheorie.ma/cgv)
 - [Confidentialité](https://codetheorie.ma/confidentialite)
@@ -23,7 +23,7 @@ Code Theorie regroupe deux produits distincts :
 
 ## Tarifs
 
-- Candidat (Code Theorie) : **25 MAD / 6 mois** — 1 examen blanc gratuit (valable 7 jours après l'inscription ou jusqu'à ce qu'il soit passé), puis accès complet, paiement unique.
+- Candidat (Code Theorie) : **gratuit** — accès complet, sans paiement, sans carte, sans abonnement.
 - Siya9a Pro Start : **5 900 MAD / an** — jusqu'à 20 nouveaux élèves / mois.
 - Siya9a Pro ÉLITE Medium : **9 900 MAD / an** — jusqu'à 50 nouveaux élèves / mois.
 - Siya9a Pro ÉLITE Grand Cabinet : **18 900 MAD / an** — jusqu'à 150 nouveaux élèves / mois, multi-filiales.
