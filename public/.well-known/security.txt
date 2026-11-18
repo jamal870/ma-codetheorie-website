@@ -1,7 +1,7 @@
 # Politique de signalement des vulnérabilités — codetheorie.ma (Finza Tech)
 # https://www.rfc-editor.org/rfc/rfc9116
 Contact: mailto:support@finza.ma
-Contact: tel:+212661349492
+Contact: tel:+41767790383
 Expires: 2027-10-31T22:00:00.000Z
 Preferred-Languages: fr, en, de
 Canonical: https://codetheorie.ma/.well-known/security.txt

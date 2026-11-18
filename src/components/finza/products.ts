@@ -50,7 +50,7 @@ export const COMPANY = {
   url: "https://finza.ma",
   tagline: "Une création Finza Tech",
   email: "support@finza.ma",
-  phone: "+212661349492",
-  phoneDisplay: "06 61 34 94 92",
-  whatsappUrl: "https://wa.me/212661349492?text=Bonjour%20Finza",
+  phone: "+41767790383",
+  phoneDisplay: "+41 76 779 03 83",
+  whatsappUrl: "https://wa.me/41767790383?text=Bonjour%20Finza",
 };

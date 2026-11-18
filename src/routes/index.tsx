@@ -259,11 +259,11 @@ function Hero() {
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
             <a
-              href="tel:+212661349492"
+              href="tel:+41767790383"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-finza-ink px-7 py-4 text-[15px] font-extrabold text-finza-ink transition-colors hover:bg-finza-ink hover:text-finza-paper"
             >
               <Phone className="h-4 w-4" aria-hidden />
-              06 61 34 94 92
+              +41 76 779 03 83
             </a>
           </div>
 
@@ -482,7 +482,7 @@ function EcolesSection() {
                   ))}
                 </ul>
                 <a
-                  href={plan.name === "ÉLITE Grand Cabinet" ? "https://wa.me/212661349492?text=Bonjour%20Siya9a%20Pro" : "https://app.siya9apro.ma/"}
+                  href={plan.name === "ÉLITE Grand Cabinet" ? "https://wa.me/41767790383?text=Bonjour%20Siya9a%20Pro" : "https://app.siya9apro.ma/"}
                   target={plan.name === "ÉLITE Grand Cabinet" ? "_blank" : undefined}
                   rel={plan.name === "ÉLITE Grand Cabinet" ? "noopener noreferrer" : undefined}
                   className={
@@ -503,7 +503,7 @@ function EcolesSection() {
                 <Mail className="h-3.5 w-3.5" aria-hidden /> support@finza.ma
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Phone className="h-3.5 w-3.5" aria-hidden /> 06 61 34 94 92
+                <Phone className="h-3.5 w-3.5" aria-hidden /> +41 76 779 03 83
               </span>
             </div>
             <div className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-finza-ink-soft">
@@ -531,7 +531,7 @@ function EcolesSection() {
             pour construire l'outil avec elles — support prioritaire et tarif préférentiel inclus.
           </p>
           <a
-            href="https://wa.me/212661349492?text=Bonjour%20Siya9a%20Pro%2C%20je%20souhaite%20postuler%20pour%20une%20place%20pilote%202026"
+            href="https://wa.me/41767790383?text=Bonjour%20Siya9a%20Pro%2C%20je%20souhaite%20postuler%20pour%20une%20place%20pilote%202026"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-finza-brand px-6 py-3 text-[14px] font-extrabold text-finza-brand-ink shadow-[var(--finza-shadow-brand)] transition-transform hover:scale-[1.03]"

@@ -17,7 +17,7 @@ const DESCRIPTION =
   "Application gratuite d'entraînement au code de la route : 1 000 questions, examens blancs, entraînement par thème, français + darija, hors-ligne. Un service de Finza Tech pour les auto-écoles et leurs candidats. Sans paiement, sans carte.";
 
 const WHATSAPP_ECOLES =
-  "https://wa.me/212661349492?text=" +
+  "https://wa.me/41767790383?text=" +
   encodeURIComponent("Bonjour, je dirige une auto-école et je souhaite proposer Code Theorie à mes candidats.");
 
 const REGISTER_URL = "https://app.codetheorie.ma/?mode=register";
@@ -477,7 +477,7 @@ function ElevesPage() {
 
         {/* WhatsApp floating */}
         <a
-          href="https://wa.me/212661349492?text=Bonjour%20Code%20Theorie"
+          href="https://wa.me/41767790383?text=Bonjour%20Code%20Theorie"
           target="_blank"
           rel="noopener"
           aria-label="Contacter le support Code Theorie sur WhatsApp"

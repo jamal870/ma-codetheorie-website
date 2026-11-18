@@ -37,7 +37,7 @@ function MentionsLegales() {
         <p>
           Téléphone :{" "}
           <a href={`tel:${COMPANY.phone}`} className="font-semibold text-finza-brand">
-            +212 661 349 492
+            +41 76 779 03 83
           </a>
         </p>
         <p>
