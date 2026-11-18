@@ -8,7 +8,7 @@ export const Route = createFileRoute("/cgv")({
       {
         name: "description",
         content:
-          "Conditions générales de vente des abonnements Siya9a Pro et Code Theorie : prix, paiement, durée, résiliation, support et droit applicable.",
+          "Conditions générales de vente des abonnements Siya9a Pro : prix, paiement, durée, résiliation, support et droit applicable. Code Theorie est gratuit.",
       },
       { property: "og:title", content: "CGV — Conditions Générales de Vente | Siya9a Pro" },
       {
@@ -32,9 +32,10 @@ function Cgv() {
     >
       <LegalBlock heading="1. Objet">
         <p>
-          Les présentes CGV régissent la souscription aux logiciels SaaS Siya9a Pro (gestion
-          auto-école) et Code Theorie (entraînement au code de la route) édités par Finza Tech,
-          Casablanca.
+          Les présentes CGV régissent la souscription au logiciel SaaS Siya9a Pro (gestion
+          auto-école) édité par Finza Tech, Casablanca. L'application Code Theorie (entraînement
+          au code de la route) est mise à disposition gratuitement : elle ne fait l'objet d'aucune
+          vente et d'aucun paiement.
         </p>
       </LegalBlock>
 
@@ -49,8 +50,8 @@ function Cgv() {
       <LegalBlock heading="3. Durée et résiliation">
         <p>
           Les abonnements auto-école sont conclus pour 12 mois renouvelables par tacite
-          reconduction, résiliables avec préavis de 30 jours. L'accès candidat Code Theorie est un
-          achat unique, sans reconduction.
+          reconduction, résiliables avec préavis de 30 jours. L'accès à Code Theorie est gratuit
+          et sans engagement ; Finza Tech peut faire évoluer ou interrompre ce service gratuit.
         </p>
       </LegalBlock>
 

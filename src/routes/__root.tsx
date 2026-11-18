@@ -127,12 +127,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "Éditeur marocain de Code Theorie (entraînement à l'examen théorique du permis, application indépendante de la NARSA) et de Siya9a Pro (logiciel de gestion d'auto-école).",
           email: "support@finza.ma",
-          telephone: "+212661349492",
+          telephone: "+41767790383",
           contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer support",
             email: "support@finza.ma",
-            telephone: "+212661349492",
+            telephone: "+41767790383",
             availableLanguage: ["fr", "ar"],
             areaServed: "MA",
           },

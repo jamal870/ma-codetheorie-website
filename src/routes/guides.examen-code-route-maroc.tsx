@@ -9,7 +9,6 @@ import {
   breadcrumbSchema,
   type GuideFaqItem,
 } from "@/components/finza/GuideLayout";
-import { PRICE_MAD } from "@/lib/pricing";
 
 const PAGE_URL = "https://codetheorie.ma/guides/examen-code-route-maroc";
 /** <title> (≤ 60 caractères) ; le H1 complet est HEADLINE. */
@@ -34,7 +33,7 @@ const FAQ: GuideFaqItem[] = [
   {
     question: "Combien coûte l'entraînement Code Theorie ?",
     answer:
-      `${PRICE_MAD} MAD pour l'accès complet, en achat unique. Ce montant couvre uniquement l'entraînement : les frais d'examen et les frais d'auto-école sont facturés séparément.`,
+      "Rien : Code Theorie est gratuit, sans carte ni abonnement. Les frais d'examen et les frais d'auto-école restent à régler auprès de votre auto-école.",
   },
   {
     question: "Que se passe-t-il en cas d'échec au code ?",
@@ -93,9 +92,9 @@ function Page() {
       intro="L'examen du permis de conduire au Maroc comporte une épreuve théorique sur le code de la route (le « code ») puis une épreuve pratique. Ce guide détaille le déroulé de l'épreuve, son coût réel, ce qui dépend de l'auto-école, ce qui dépend de NARSA, et la préparation qui permet de réussir le code de la route du premier coup."
       updated={UPDATED}
       cta={{
-        label: `Commencer l'entraînement — ${PRICE_MAD} MAD`,
+        label: "Commencer l'entraînement — gratuit",
         href: "/eleves",
-        note: "Accès complet en achat unique. Les frais d'examen et d'auto-école ne sont pas inclus.",
+        note: "Code Theorie est gratuit. Les frais d'examen et d'auto-école se règlent auprès de votre auto-école.",
       }}
     >
       <GuideSection heading="Le parcours en cinq étapes">
@@ -145,7 +144,7 @@ function Page() {
           rows={[
             ["Forfait auto-école (code + conduite)", "Auto-école", "Variable selon la ville et l'établissement"],
             ["Frais d'examen et de titre", "Circuit officiel, via l'auto-école", "Selon tarifs en vigueur"],
-            ["Entraînement Code Theorie", "Code Theorie", `${PRICE_MAD} MAD — accès complet`],
+            ["Entraînement Code Theorie", "—", "Gratuit"],
           ]}
         />
         <p>

@@ -8,21 +8,25 @@ import dashboardShot from "@/assets/screenshots/03-dashboard.webp";
 import seriesShot from "@/assets/screenshots/04-series.webp";
 import quizShot from "@/assets/screenshots/05-quiz.webp";
 import { PUBLISHER } from "@/lib/schema";
-import { PRICE_MAD } from "@/lib/pricing";
 
 const THEME_COLOR = "#38bdf8";
 
 const PAGE_URL = "https://codetheorie.ma/eleves";
-const TITLE = "Code Theorie — Entraînement au code de la route Maroc, darija";
+const TITLE = "Code Theorie — Entraînement gratuit au code de la route (Maroc, darija)";
 const DESCRIPTION =
-  `1 000 questions d'entraînement au code de la route, examens blancs illimités, français + darija, hors-ligne. 1 examen blanc gratuit (7 jours), puis ${PRICE_MAD} MAD / 6 mois. Sans abonnement, sans carte.`;
+  "Application gratuite d'entraînement au code de la route : 1 000 questions, examens blancs, entraînement par thème, français + darija, hors-ligne. Un service de Finza Tech pour les auto-écoles et leurs candidats. Sans paiement, sans carte.";
+
+const WHATSAPP_ECOLES =
+  "https://wa.me/41767790383?text=" +
+  encodeURIComponent("Bonjour, je dirige une auto-école et je souhaite proposer Code Theorie à mes candidats.");
 
 const REGISTER_URL = "https://app.codetheorie.ma/?mode=register";
 
 const NAV = [
   { label: "Fonctionnalités", hash: "features" },
   { label: "Aperçu", hash: "screens" },
-  { label: "Tarif élève", hash: "offre" },
+  { label: "Gratuit", hash: "offre" },
+  { label: "Auto-écoles", hash: "auto-ecoles" },
   { label: "FAQ", hash: "faq" },
 ];
 
@@ -34,13 +38,13 @@ const PAINS = [
   },
   {
     icon: "⏰",
-    title: "Pas de temps pour l'auto-école ?",
-    desc: "Horaires fixes, cours groupés, trajet fatigant. Tu perds des semaines pour un examen théorique.",
+    title: "Peu de temps entre deux cours ?",
+    desc: "Entre deux séances à l'auto-école, révise dix minutes sur ton téléphone, où tu veux et quand tu veux.",
   },
   {
-    icon: "💸",
-    title: "800 à 1 500 MAD pour le code ?",
-    desc: "Les auto-écoles facturent cher juste pour la partie théorique. Tu paies pour une salle, pas pour progresser.",
+    icon: "🎯",
+    title: "Tu ne sais pas quoi réviser ?",
+    desc: "L'app repère tes erreurs et tes thèmes faibles, et te les repropose jusqu'à ce que ce soit acquis.",
   },
   {
     icon: "🤯",
@@ -51,56 +55,52 @@ const PAINS = [
 
 const FEATURES = [
   { icon: "🎯", title: "1 000 questions d'entraînement", desc: "Des questions au format de l'examen théorique du permis B, avec explications en français et en darija." },
-  { icon: "📝", title: "25 séries thématiques", desc: "Panneaux, priorités, nuit, alcool, autoroute… chaque thème isolé pour progresser." },
+  { icon: "📝", title: "25 séries et 10 thèmes", desc: "Révise série par série ou par thème : panneaux, priorités, vitesse, dépassement, conduite de nuit…" },
   { icon: "🎧", title: "Écoute en Darija", desc: "Chaque question lisible en français ET écoutable en darija marocaine (bouton audio)." },
-  { icon: "📊", title: "Examens blancs illimités", desc: "40 questions chronométrées, au format de l'examen théorique. Score immédiat. Un entraînement, pas un examen officiel." },
-  { icon: "📴", title: "Fonctionne hors-ligne", desc: "3,7 Mo de cache — révise dans le taxi, le tram, le désert. Sync dès que le wifi revient." },
+  { icon: "📊", title: "Examens blancs illimités", desc: "40 questions, tous les thèmes représentés, résultat par thème. Un entraînement, pas un examen officiel." },
+  { icon: "📴", title: "Fonctionne hors-ligne", desc: "Télécharge le contenu une fois, puis révise sans connexion. Ta progression se synchronise ensuite." },
   { icon: "📲", title: "Installable comme une app", desc: "Ajoute-la à ton écran d'accueil en 1 clic — iPhone, Android, PC. Pas d'App Store." },
-  { icon: "🏆", title: "Suivi de progression", desc: "Streak, taux de réussite, évolution sur 7 jours et derniers examens blancs. Tu vois où tu en es." },
-  { icon: "🔒", title: "Sans abonnement piège", desc: `${PRICE_MAD} MAD / 6 mois, accès complet. Zéro débit automatique, zéro carte enregistrée.` },
+  { icon: "🏆", title: "Suivi de progression", desc: "Objectif du jour, jours de suite, calendrier, thèmes faibles. L'entraînement intelligent te repropose tes erreurs." },
+  { icon: "🎁", title: "Gratuit", desc: "Aucun paiement, aucune carte, aucun abonnement. Un service de Finza Tech pour les auto-écoles et leurs candidats." },
 ];
 
 const SCREENS = [
   { src: dashboardShot, title: "Ton tableau de bord", desc: "Ton taux de réussite, ton streak, ton prochain examen blanc — tout en un coup d'œil." },
   { src: quizShot, title: "Une question d'entraînement", desc: "Photo réelle, choix multiples, bouton « Écouter en darija ». Comprends avant de répondre." },
-  { src: seriesShot, title: "25 séries thématiques", desc: "Panneaux, priorités, nuit, autoroute… bosse un thème à la fois." },
+  { src: seriesShot, title: "25 séries de 40 questions", desc: "Série par série, ou par thème depuis l'onglet Apprendre." },
   { src: loginShot, title: "Connexion sécurisée", desc: "Email ou numéro marocain. Reste connecté sur tous tes appareils." },
-  { src: registerShot, title: "Inscription en 30 secondes", desc: "Aucune carte bancaire. 1 examen blanc gratuit dès l'inscription, valable 7 jours." },
-];
-
-const COMPARE = [
-  ["Prix", "800 à 1 500 MAD", `${PRICE_MAD} MAD`],
-  ["Disponibilité", "Horaires fixes", "24/7 · partout"],
-  ["Mise à jour", "Livre papier (selon l'édition)", "Mis à jour par l'éditeur"],
-  ["Nombre de questions", "≈ 200 dans le livre", "1 000 d'entraînement"],
-  ["Examens blancs", "1 × en salle", "Illimités"],
-  ["Suivi de progression", "Aucun", "Live · par thème"],
-  ["Écoute en darija", "Non", "Oui, chaque question"],
-  ["Mode hors-ligne", "—", "3,7 Mo de cache"],
+  { src: registerShot, title: "Inscription en 30 secondes", desc: "Un e-mail suffit. Aucune carte bancaire, aucun paiement." },
 ];
 
 const OFFER_FEATURES = [
   "1 000 questions d'entraînement au format de l'examen",
-  "25 séries thématiques",
-  "Examens blancs illimités",
+  "25 séries et 10 thèmes",
+  "Examens blancs illimités, résultat par thème",
+  "Entraînement intelligent : erreurs et thèmes faibles d'abord",
   "Français + Darija (audio)",
-  "Mode hors-ligne complet",
-  "Support WhatsApp 7j/7",
-  "Aucun renouvellement automatique",
+  "Mode hors-ligne",
+  "Aucun paiement, aucune carte, aucun abonnement",
+];
+
+const ECOLE_POINTS = [
+  { title: "Gratuit pour vos candidats", desc: "Vous partagez un lien, ils créent leur compte. Aucun coût pour l'auto-école, aucun pour le candidat." },
+  { title: "Un complément à vos cours", desc: "Vos cours restent le cœur de la formation. Code Theorie sert à réviser entre deux séances, sur le téléphone." },
+  { title: "En darija et en français", desc: "Chaque question s'écoute en darija : utile pour les candidats plus à l'aise à l'oral." },
+  { title: "Révision ciblée", desc: "L'app repropose les erreurs et les thèmes faibles de chaque candidat, et montre sa progression." },
 ];
 
 const FAQS: ReadonlyArray<readonly [string, string]> = [
+  ["C'est vraiment gratuit ?", "Oui. Aucun paiement, aucune carte bancaire, aucun abonnement. Code Theorie est un service de Finza Tech pour les auto-écoles et leurs candidats. Finza Tech édite par ailleurs Siya9a Pro, un logiciel de gestion payant destiné aux auto-écoles."],
   ["Est-ce un examen officiel ou certifié ?", "Code Theorie est une application indépendante de préparation à l'examen théorique. Elle n'est ni éditée, ni approuvée, ni certifiée par la NARSA. Les examens blancs sont des entraînements, pas des examens officiels, et aucune réussite à l'examen n'est garantie. Seule la NARSA organise l'examen officiel."],
-  ["Comment fonctionne l'examen blanc gratuit ?", `Inscription email, pas de carte → 1 examen blanc complet gratuit, valable 7 jours après l'inscription ou jusqu'à ce que tu l'aies passé (selon ce qui arrive en premier). Pour les séries, la révision et les examens blancs illimités : ${PRICE_MAD} MAD / 6 mois, par virement, reçu sur WhatsApp.`],
-  ["Combien coûte l'accès complet ?", `${PRICE_MAD} MAD / 6 mois. Pas d'abonnement, pas de renouvellement automatique. Paiement par virement ou Wafacash, reçu sur WhatsApp.`],
-  ["Comment je paye ?", "Par virement bancaire ou Wafacash, puis tu nous envoies le reçu sur WhatsApp. C'est la méthode principale. Carte bancaire marocaine (CMI) disponible en option via YouCan Pay."],
-  ["Est-ce que ça marche sans internet ?", "Oui. Depuis le tableau de bord, télécharge le contenu pour l'utiliser hors-ligne. Tu peux alors réviser sans connexion ; ta progression se synchronise dès que le wifi revient."],
-  ["C'est disponible en darija ?", "Oui. L'interface est en français, mais chaque question dispose d'un bouton « Écouter » qui lit la question et les réponses en darija marocaine. Idéal si tu comprends mieux à l'oral."],
-  ["Comment j'installe l'app sur mon téléphone ?", "Sur iPhone : ouvre Safari → codetheorie.ma → bouton Partager → « Sur l'écran d'accueil ». Sur Android : Chrome te propose automatiquement « Installer l'app ». Pas besoin d'App Store."],
-  ["Je peux annuler à tout moment ?", `Il n'y a rien à annuler — c'est un paiement unique de ${PRICE_MAD} MAD / 6 mois. Aucune carte n'est stockée, aucun débit ne se déclenche automatiquement.`],
-  ["Ça marche sur ordinateur aussi ?", "Oui — la même app fonctionne sur PC, Mac, tablette et téléphone. Tu te connectes avec le même compte partout, ta progression est synchronisée en temps réel."],
-  ["Mes données sont-elles en sécurité ?", "Oui. Aucune donnée revendue. Aucune publicité. Hébergement sécurisé, paiements via YouCan Pay. Tu peux supprimer ton compte à tout moment."],
-  ["Combien de temps faut-il pour se préparer ?", "Cela dépend de ton niveau et de ton rythme. Le tableau de bord te montre ta progression ; c'est une indication d'entraînement, pas une garantie de réussite à l'examen."],
+  ["Les questions sont-elles celles de l'examen officiel ?", "Pas nécessairement. Ce sont des questions d'entraînement au format de l'examen théorique. Depuis mars 2024, la NARSA utilise une nouvelle banque de questions, accessible sur sa plateforme Perminou : nos questions peuvent différer par les photos, la formulation et certains thèmes. Utilise Code Theorie pour comprendre et réviser les règles, et Perminou pour voir les questions officielles."],
+  ["Je suis inscrit dans une auto-école : est-ce utile ?", "Oui, c'est fait pour ça. Code Theorie complète les cours de ton auto-école : tu révises entre deux séances, tu retravailles tes erreurs et tu arrives mieux préparé. Il ne remplace ni les cours ni l'inscription à l'examen, qui passent par l'auto-école."],
+  ["Je dirige une auto-école : comment en faire profiter mes candidats ?", "Partagez simplement le lien de l'application à vos candidats, ou écrivez-nous sur WhatsApp : nous vous envoyons le lien et un court message à transmettre. C'est gratuit pour vous comme pour eux."],
+  ["Est-ce que ça marche sans internet ?", "Oui. Depuis l'application, télécharge le contenu pour l'utiliser hors-ligne. Tu peux alors réviser sans connexion ; ta progression se synchronise dès que le wifi revient."],
+  ["C'est disponible en darija ?", "Oui. L'interface est en français ou en arabe, et chaque question dispose d'un bouton « Écouter » qui lit l'explication en darija marocaine. Idéal si tu comprends mieux à l'oral."],
+  ["Comment j'installe l'app sur mon téléphone ?", "Sur iPhone : ouvre Safari → app.codetheorie.ma → bouton Partager → « Sur l'écran d'accueil ». Sur Android : Chrome te propose automatiquement « Installer l'app ». Pas besoin d'App Store."],
+  ["Ça marche sur ordinateur aussi ?", "Oui — la même app fonctionne sur PC, Mac, tablette et téléphone, avec le même compte. Ta progression détaillée (objectif du jour, calendrier, thèmes) est enregistrée sur l'appareil que tu utilises."],
+  ["Mes données sont-elles en sécurité ?", "Aucune donnée revendue, aucune publicité. Tu peux supprimer ton compte à tout moment depuis l'application."],
+  ["Combien de temps faut-il pour se préparer ?", "Cela dépend de ton niveau et de ton rythme. L'application te montre ta progression ; c'est une indication d'entraînement, pas une garantie de réussite à l'examen."],
 ];
 
 export const Route = createFileRoute("/eleves")({
@@ -109,7 +109,7 @@ export const Route = createFileRoute("/eleves")({
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
       { name: "theme-color", content: THEME_COLOR },
-      { name: "keywords", content: "code de la route maroc, NARSA 2026, examen théorique permis maroc, application code route, كود السياقة المغرب, darija" },
+      { name: "keywords", content: "code de la route maroc, examen théorique permis maroc, application code route gratuite, كود السياقة المغرب, darija" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: PAGE_URL },
@@ -135,7 +135,7 @@ export const Route = createFileRoute("/eleves")({
           inLanguage: ["fr-MA", "ar-MA"],
           offers: {
             "@type": "Offer",
-            price: String(PRICE_MAD),
+            price: "0",
             priceCurrency: "MAD",
             availability: "https://schema.org/InStock",
             url: REGISTER_URL,
@@ -165,7 +165,7 @@ function ElevesPage() {
         product="siya9a"
         logo={<CodeTheorieLogo />}
         navLinks={NAV}
-        cta={{ label: "🚀 1 examen blanc gratuit", href: REGISTER_URL }}
+        cta={{ label: "🚀 Commencer gratuitement", href: REGISTER_URL }}
         logoTo="/"
         hideProductSwitcher
       />
@@ -177,17 +177,17 @@ function ElevesPage() {
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-3.5 py-1.5 text-[12px] font-bold text-finza-brand shadow-sm">
-                🎯 Préparation à l'examen théorique · 1 000 questions
+                🎁 Gratuit · un service Finza Tech pour les auto-écoles et leurs candidats
               </div>
               <h1 className="text-[40px] font-black leading-[1.05] tracking-tight text-finza-ink sm:text-[56px]">
                 Entraîne-toi au{" "}
-                <span className="text-finza-brand">code de la route</span>{" "}
-                sans y passer 3 mois
+                <span className="text-finza-brand">code de la route</span>,{" "}
+                gratuitement
               </h1>
               <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-finza-ink-soft">
               L'app marocaine pour t'entraîner à l'examen théorique du permis : 1 000 questions d'entraînement,
               examens blancs illimités, français + darija en audio, hors-ligne.
-              <strong className="text-finza-ink"> 1 examen blanc gratuit</strong>, puis <strong className="text-finza-ink">{PRICE_MAD} MAD / 6 mois</strong> — au lieu de 1 200 MAD à l'auto-école.
+              <strong className="text-finza-ink"> C'est gratuit</strong> : aucun paiement, aucune carte. En complément des cours de ton auto-école.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -195,20 +195,20 @@ function ElevesPage() {
                   href={REGISTER_URL}
                   className="inline-flex items-center justify-center rounded-full bg-finza-brand px-7 py-4 text-[15px] font-extrabold text-finza-brand-ink shadow-[var(--finza-shadow-brand)] transition-transform hover:scale-[1.02]"
                 >
-                  🚀 1 examen blanc gratuit — 7 jours, sans carte
+                  🚀 Créer mon compte gratuit
                 </a>
                 <a
-                  href="#offre"
+                  href="#auto-ecoles"
                   className="inline-flex items-center justify-center rounded-full border-2 border-finza-brand px-7 py-4 text-[15px] font-extrabold text-finza-brand transition-colors hover:bg-finza-brand-soft"
                 >
-                  Voir les tarifs
+                  Je dirige une auto-école
                 </a>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-finza-ink-soft">
                 <span>📲 Installable en 1 clic</span>
                 <span>💳 Aucune carte requise</span>
-                <span>🇲🇦 100% marocain</span>
+                <span>🎧 Audio en darija</span>
               </div>
             </div>
 
@@ -237,9 +237,9 @@ function ElevesPage() {
           <div className="mx-auto grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4">
             {[
               ["1 000", "Questions d'entraînement"],
-              ["37", "Séries thématiques"],
-              ["1", "Examen blanc gratuit"],
-              [`${PRICE_MAD} MAD`, "Paiement unique · 6 mois"],
+              ["25", "Séries de 40 questions"],
+              ["10", "Thèmes"],
+              ["0 MAD", "Gratuit, sans carte"],
             ].map(([n, l]) => (
               <div key={l} className="text-center">
                 <div className="text-3xl font-black text-finza-brand sm:text-4xl">{n}</div>
@@ -325,70 +325,31 @@ function ElevesPage() {
           </div>
         </section>
 
-        {/* COMPARE */}
-        <section className="bg-finza-surface px-5 py-20">
-          <div className="mx-auto max-w-4xl">
+        {/* GRATUIT */}
+        <section id="offre" className="bg-finza-surface px-5 py-20" style={{ scrollMarginTop: 80 }}>
+          <div className="mx-auto max-w-3xl">
             <div className="text-center">
-              <p className="text-[11px] font-extrabold uppercase tracking-[2px] text-finza-brand">Comparaison honnête</p>
+              <p className="text-[11px] font-extrabold uppercase tracking-[2px] text-finza-brand">Sans paiement</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight text-finza-ink sm:text-4xl">
-                Auto-école classique vs. Code Theorie
-              </h2>
-            </div>
-            <div className="mt-10 overflow-hidden rounded-2xl border border-finza-line bg-white shadow-[var(--finza-shadow)]">
-              <table className="w-full text-left text-[14px] sm:text-[15px]">
-                <thead>
-                  <tr className="bg-finza-surface">
-                    <th className="px-4 py-3.5 font-bold text-finza-ink-soft sm:px-6"></th>
-                    <th className="px-4 py-3.5 font-extrabold text-finza-ink sm:px-6">Classique</th>
-                    <th className="px-4 py-3.5 font-extrabold text-finza-brand sm:px-6">Code Theorie</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARE.map(([k, a, b], i) => (
-                    <tr key={k} className={i % 2 === 0 ? "" : "bg-finza-surface/40"}>
-                      <td className="px-4 py-3.5 font-semibold text-finza-ink sm:px-6">{k}</td>
-                      <td className="px-4 py-3.5 text-finza-ink-soft sm:px-6">{a}</td>
-                      <td className="px-4 py-3.5 font-bold text-finza-ink sm:px-6">✓ {b}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* PRICING */}
-        <section id="offre" className="px-5 py-20" style={{ scrollMarginTop: 80 }}>
-          <div className="mx-auto max-w-5xl">
-            <div className="text-center">
-              <p className="text-[11px] font-extrabold uppercase tracking-[2px] text-finza-brand">Tarifs transparents</p>
-              <h2 className="mt-3 text-3xl font-black tracking-tight text-finza-ink sm:text-4xl">
-                1 examen blanc gratuit, puis {PRICE_MAD} MAD / 6 mois
+                Code Theorie est gratuit
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-finza-ink-soft">
-                Un seul paiement, 6 mois d'accès complet. Aucun abonnement. Aucun renouvellement automatique.
+                Un service de Finza Tech pour les auto-écoles et leurs candidats. Aucun paiement, aucune carte,
+                aucun abonnement.
               </p>
             </div>
 
-            <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
-              {/* Trial card */}
-              <div className="rounded-3xl border-2 border-dashed border-finza-brand bg-finza-brand-soft p-8">
-                <div className="text-[12px] font-extrabold uppercase tracking-[1.5px] text-finza-brand">
-                  🎁 1 examen blanc gratuit · 7 jours
+            <div className="relative mt-10 overflow-hidden rounded-3xl border-2 border-finza-brand bg-gradient-to-br from-finza-ink to-finza-ink/95 p-8 text-white shadow-[var(--finza-shadow-brand)]">
+              <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-finza-brand/25 blur-3xl" />
+              <div className="relative">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[56px] font-black leading-none">0</span>
+                  <span className="text-2xl font-bold opacity-80">MAD</span>
                 </div>
-                <div className="mt-3 text-[42px] font-black leading-none text-finza-ink">Gratuit · 1 examen blanc</div>
-                <p className="mt-2 text-[13px] text-finza-ink-soft">
-                  Valable 7 jours après l'inscription ou jusqu'à ce que tu l'aies passé, selon ce qui arrive en premier.
-                </p>
+                <div className="mt-1 text-sm opacity-70">Accès complet</div>
                 <ul className="mt-6 space-y-2.5 text-[15px]">
-                  {[
-                    "1 examen blanc complet gratuit",
-                    "Aucune carte bancaire requise",
-                    "Aucun renouvellement automatique",
-                    "Aucun débit automatique",
-                    "Accès premium en 2 min sur WhatsApp",
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-finza-ink">
+                  {OFFER_FEATURES.map((f) => (
+                    <li key={f} className="flex items-start gap-2">
                       <span className="font-black text-finza-brand">✓</span>
                       <span>{f}</span>
                     </li>
@@ -396,56 +357,54 @@ function ElevesPage() {
                 </ul>
                 <a
                   href={REGISTER_URL}
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border-2 border-finza-brand bg-white px-7 py-4 text-[15px] font-extrabold text-finza-brand transition-colors hover:bg-finza-brand hover:text-finza-brand-ink"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-finza-brand px-7 py-4 text-[15px] font-extrabold text-finza-brand-ink shadow-[var(--finza-shadow-brand)] transition-transform hover:scale-[1.02]"
                 >
-                  Faire l'examen blanc gratuit
+                  🚀 Créer mon compte gratuit
                 </a>
               </div>
-
-              {/* Premium card */}
-              <div className="relative overflow-hidden rounded-3xl border-2 border-finza-brand bg-gradient-to-br from-finza-ink to-finza-ink/95 p-8 text-white shadow-[var(--finza-shadow-brand)]">
-                <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-finza-brand/25 blur-3xl" />
-                <div className="relative">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-finza-brand px-3 py-1 text-[11px] font-black uppercase tracking-widest text-finza-brand-ink">
-                    ⭐ Le choix des élèves
-                  </div>
-                  <div className="mt-4 flex items-baseline gap-2">
-                    <span className="text-[56px] font-black leading-none">{PRICE_MAD}</span>
-                    <span className="text-2xl font-bold opacity-80">MAD</span>
-                  </div>
-                  <div className="mt-1 text-sm opacity-70">Paiement unique · 6 mois</div>
-                  <ul className="mt-6 space-y-2.5 text-[15px]">
-                    {OFFER_FEATURES.map((f) => (
-                      <li key={f} className="flex items-start gap-2">
-                        <span className="font-black text-finza-brand">✓</span>
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={REGISTER_URL}
-                    className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-finza-brand px-7 py-4 text-[15px] font-extrabold text-finza-brand-ink shadow-[var(--finza-shadow-brand)] transition-transform hover:scale-[1.02]"
-                  >
-                    🚀 Démarrer — {PRICE_MAD} MAD / 6 mois
-                  </a>
-                </div>
-              </div>
             </div>
+            <p className="mt-6 text-center text-[13px] leading-relaxed text-finza-ink-soft">
+              Pourquoi gratuit ? Finza Tech édite Siya9a Pro, le logiciel de gestion des auto-écoles. Code Theorie
+              est notre contribution à la préparation de leurs candidats.
+            </p>
+          </div>
+        </section>
 
-            {/* Payment methods */}
-            <div className="mt-10 rounded-2xl bg-finza-surface p-6 text-center">
-              <div className="text-[13px] font-bold text-finza-ink-soft">
-                💶 Paiement par virement / Wafacash + reçu WhatsApp — carte CMI en option
-              </div>
-              <div className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] font-semibold text-finza-ink">
-                <span>Virement bancaire</span>
-                <span>·</span>
-                <span>Wafacash</span>
-                <span>·</span>
-                <span>Reçu sur WhatsApp</span>
-                <span>·</span>
-                <span className="text-finza-brand">CMI via YouCan Pay (option)</span>
-              </div>
+        {/* AUTO-ÉCOLES */}
+        <section id="auto-ecoles" className="px-5 py-20" style={{ scrollMarginTop: 80 }}>
+          <div className="mx-auto max-w-5xl">
+            <div className="text-center">
+              <p className="text-[11px] font-extrabold uppercase tracking-[2px] text-finza-brand">Pour les auto-écoles</p>
+              <h2 className="mt-3 text-3xl font-black tracking-tight text-finza-ink sm:text-4xl">
+                Offrez Code Theorie à vos candidats
+              </h2>
+              <p className="mx-auto mt-3 max-w-2xl text-finza-ink-soft">
+                Un outil de révision gratuit, à proposer en complément de vos cours de code.
+              </p>
+            </div>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+              {ECOLE_POINTS.map((e) => (
+                <div key={e.title} className="rounded-2xl border border-finza-line bg-white p-6 shadow-[var(--finza-shadow)]">
+                  <h3 className="text-[17px] font-extrabold text-finza-ink">{e.title}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-finza-ink-soft">{e.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href={WHATSAPP_ECOLES}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center justify-center rounded-full bg-finza-brand px-7 py-4 text-[15px] font-extrabold text-finza-brand-ink shadow-[var(--finza-shadow-brand)] transition-transform hover:scale-[1.02]"
+              >
+                Recevoir le lien pour mes candidats
+              </a>
+              <a
+                href="/"
+                className="inline-flex items-center justify-center rounded-full border-2 border-finza-brand px-7 py-4 text-[15px] font-extrabold text-finza-brand transition-colors hover:bg-finza-brand-soft"
+              >
+                Découvrir Siya9a Pro (gestion)
+              </a>
             </div>
           </div>
         </section>
@@ -495,28 +454,30 @@ function ElevesPage() {
               Prêt à t'entraîner ?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-[15px] opacity-90">
-              Crée ton compte en 30 secondes. 1 examen blanc gratuit pour tester, valable 7 jours. Aucune carte.
+              Crée ton compte en 30 secondes. C'est gratuit : aucun paiement, aucune carte.
             </p>
             <a
               href={REGISTER_URL}
               className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-[15px] font-extrabold text-finza-brand shadow-lg transition-transform hover:scale-[1.02]"
             >
-              🚀 Faire mon examen blanc gratuit
+              🚀 Créer mon compte gratuit
             </a>
             <p className="mt-4 text-xs opacity-80">
-              Puis {PRICE_MAD} MAD / 6 mois pour séries + révision + examens illimités. Zéro abonnement.
+              Séries, entraînement par thème, révision des erreurs et examens blancs : tout est inclus.
             </p>
           </div>
           <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-finza-ink-soft">
             Code Theorie est une application indépendante de préparation à l'examen théorique. Elle
             n'est ni éditée, ni approuvée, ni certifiée par la NARSA. Les examens blancs sont des
-            entraînements, pas des examens officiels, et aucune réussite à l'examen n'est garantie.
+            entraînements, pas des examens officiels, et aucune réussite à l'examen n'est garantie. Les
+            questions d'entraînement ne correspondent pas nécessairement à la banque de questions
+            officielle en vigueur.
           </p>
         </section>
 
         {/* WhatsApp floating */}
         <a
-          href="https://wa.me/212661349492?text=Bonjour%20Code%20Theorie"
+          href="https://wa.me/41767790383?text=Bonjour%20Code%20Theorie"
           target="_blank"
           rel="noopener"
           aria-label="Contacter le support Code Theorie sur WhatsApp"

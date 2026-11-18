@@ -6,7 +6,7 @@ Si vous découvrez une faille de sécurité sur **codetheorie.ma** ou dans ce d�
 merci de **ne pas** ouvrir d'issue publique. Écrivez-nous directement :
 
 - E-mail : **support@finza.ma** (objet : « Sécurité codetheorie.ma »)
-- Téléphone / WhatsApp : +212 661 349 492
+- Téléphone / WhatsApp : +41 76 779 03 83
 - Fichier machine-lisible : https://codetheorie.ma/.well-known/security.txt (RFC 9116)
 
 Merci d'indiquer l'URL concernée, les étapes pour reproduire le problème et,

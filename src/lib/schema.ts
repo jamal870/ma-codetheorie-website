@@ -14,7 +14,7 @@ export const PUBLISHER = {
     "@type": "ContactPoint",
     contactType: "customer support",
     email: "support@finza.ma",
-    telephone: "+212661349492",
+    telephone: "+41767790383",
     availableLanguage: ["fr", "ar"],
     areaServed: "MA",
   },
